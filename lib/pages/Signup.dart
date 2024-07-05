@@ -134,7 +134,8 @@ class _HomePageState extends State<HomePage> {
                     onPressed: (){
                       if(_fromkey.currentState!.validate()){
                         _fromkey.currentState!.save();
-                        SignUp(email, password);
+
+                       isLogin?SignIn(email, password) : SignUp(email, password);
                       }
                  
                     }, child : isLogin? Text("Login",style: TextStyle(fontSize: 20 ,color:  Colors.black),) : Text("Sign Up",style: TextStyle(fontSize: 20,color: Colors.black),)),
