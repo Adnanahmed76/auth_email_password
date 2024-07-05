@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "635612444379",
+    "firebase_url": "https://signin-a99e4-default-rtdb.firebaseio.com",
+    "project_id": "signin-a99e4",
+    "storage_bucket": "signin-a99e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635612444379:android:e564dccf1dadf57761fefe",
+        "android_client_info": {
+          "package_name": "com.example.authe_email"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtLkGxfWKQUVtwUl1O-YqxOpPbbiIVZQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635612444379:android:4cee1930606ada3461fefe",
+        "android_client_info": {
+          "package_name": "com.example.signin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtLkGxfWKQUVtwUl1O-YqxOpPbbiIVZQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
