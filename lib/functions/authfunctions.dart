@@ -7,7 +7,7 @@ try   {
     password:password,
     
   );
-  print("///////////Success////////////////////");
+  print("///////////Success/////////////");
 } on FirebaseAuthException catch (e) {
   if (e.code == 'weak-password') {
     print('The password provided is too weak.');
@@ -25,7 +25,7 @@ SignIn(String email,String password)async{
     email: email,
     password: password
   );
-  print("////////////Success////////");
+  print("///////Success////////");
 } on FirebaseAuthException catch (e) {
   if (e.code == 'user-not-found') {
     print('No user found for that email.');
