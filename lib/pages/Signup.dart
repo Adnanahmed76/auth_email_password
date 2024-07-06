@@ -10,8 +10,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final _fromkey=GlobalKey<FormState>();
+  //this is a boolean true and false
   bool isLogin=false;
   String email="";
+  //controller email 
+
   String password="";
   String username="";
   @override
@@ -20,7 +23,7 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blueAccent,
-          title: Text("Email/pass Auth",style: TextStyle(color: Colors.black),),),
+          title: Text("Signup",style: TextStyle(color: Colors.black),),),
         body: Form(
           key: _fromkey,
           child: Container(
