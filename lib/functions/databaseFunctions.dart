@@ -1,11 +1,27 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'package:cloud_firestore/cloud_firestore.dart';create ()async{
-  await FirebaseFirestore.instance.collection('pets').doc('ton').set(
-   { 'name':'Tom',
-    'animal':'Dog',
-    'age': 12
-   }
-  
-  );
-print("Database Updated");
+// Function to create a new document in Firestore
+create(String collName,  docName,  name,  animal, int age) async {
+  try {
+    await FirebaseFirestore.instance.collection(collName).doc(docName).set({
+      'name': name,
+      'animal': animal,
+      'age': age,
+    });
+    print("Database Updated");
+  } catch (e) {
+    print("Error updating database: $e");
+  }
+}
+
+// Function to update an existing document in Firestore
+update(String collName, docName,  field, dynamic newFieldValue) async {
+  try {
+    await FirebaseFirestore.instance.collection(collName).doc(docName).update({
+      field: newFieldValue,
+    });
+    print("Success updated");
+  } catch (e) {
+    print("Error updating document: $e");
+  }
 }

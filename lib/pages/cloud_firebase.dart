@@ -29,9 +29,17 @@ class _DatabaseOptionsState extends State<DatabaseOptions> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(onPressed: (){
-                create();
+                create(
+                  'pets',
+                  'kitty',
+                  'jerry',
+                  'cat',
+                  5
+                );
               }, child: Text("Create")),
-                  ElevatedButton(onPressed: (){}, child: Text("Update")),
+                  ElevatedButton(onPressed: (){
+                    update('pets', 'tom', 'age', 14);
+                  }, child: Text("Update")),
                       ElevatedButton(onPressed: (){}, child: Text("Retrive")),
                           ElevatedButton(onPressed: (){}, child: Text("Delete"))
             ],
