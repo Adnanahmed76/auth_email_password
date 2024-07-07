@@ -1,4 +1,5 @@
 import 'package:authe_email/functions/authfunctions.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,9 +21,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        
         appBar: AppBar(
           backgroundColor: Colors.blueAccent,
-          title: Text("Signup",style: TextStyle(color: Colors.black),),),
+          title: Text("Signup",style: TextStyle(color: Colors.black),),
+      
+          ),
+          
         body: Form(
           key: _fromkey,
           child: Container(
