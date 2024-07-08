@@ -12,6 +12,7 @@ class _PetListState extends State<PetList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //this is a appbar
       appBar: AppBar(
         title: Text("My Pets"),
       ),
