@@ -1,3 +1,4 @@
+import 'package:authe_email/functions/authfunctions.dart';
 import 'package:authe_email/pages/Signup.dart';
 import 'package:authe_email/pages/cloud_firebase.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -17,12 +18,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: DatabaseOptions()
+      home: StreamBuilder(stream: FirebaseAuth.instance.authStateChanges(),
+       builder: (context,snapshot){
+        if(snapshot.hasData){
+          return HomePage();
+        }
+        else{
+          return DatabaseOptions();
+        }
+       })
       );
   }
 }

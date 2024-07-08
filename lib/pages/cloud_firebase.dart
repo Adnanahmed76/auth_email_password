@@ -38,10 +38,14 @@ class _DatabaseOptionsState extends State<DatabaseOptions> {
                 );
               }, child: Text("Create")),
                   ElevatedButton(onPressed: (){
-                    update('pets', 'tom', 'age', 14);
+                    update('pets', 'tom', 'animal', "tiger");
                   }, child: Text("Update")),
-                      ElevatedButton(onPressed: (){}, child: Text("Retrive")),
-                          ElevatedButton(onPressed: (){}, child: Text("Delete"))
+                      ElevatedButton(onPressed: (){
+
+                      }, child: Text("Retrive")),
+                          ElevatedButton(onPressed: (){
+delete('pets', 'kitts');
+                          }, child: Text("Delete"))
             ],
           ),
         ),

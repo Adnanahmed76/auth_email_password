@@ -15,7 +15,7 @@ create(String collName,  docName,  name,  animal, int age) async {
 }
 
 // Function to update an existing document in Firestore
-update(String collName, docName,  field, dynamic newFieldValue) async {
+update(String collName, docName,  field,  newFieldValue) async {
   try {
     await FirebaseFirestore.instance.collection(collName).doc(docName).update({
       field: newFieldValue,
@@ -24,4 +24,8 @@ update(String collName, docName,  field, dynamic newFieldValue) async {
   } catch (e) {
     print("Error updating document: $e");
   }
+}
+delete(String collName,docName)async{
+  await FirebaseFirestore.instance.collection(collName).doc(docName).delete();
+  print("Document deleted");
 }
