@@ -1,6 +1,6 @@
 import 'package:authe_email/functions/authfunctions.dart';
-import 'package:authe_email/pages/Signup.dart';
-import 'package:authe_email/pages/cloud_firebase.dart';
+import 'package:authe_email/screens/Signup.dart';
+import 'package:authe_email/screens/cloud_firebase.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';

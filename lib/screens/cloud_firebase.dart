@@ -1,4 +1,5 @@
 import 'package:authe_email/functions/databaseFunctions.dart';
+import 'package:authe_email/pages/pets.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 class DatabaseOptions extends StatefulWidget {
@@ -31,17 +32,17 @@ class _DatabaseOptionsState extends State<DatabaseOptions> {
               ElevatedButton(onPressed: (){
                 create(
                   'pets',
-                  'kitty',
-                  'jerry',
-                  'cat',
-                  5
+                  'bully',
+                  'bully',
+                  'bull',
+                  10
                 );
               }, child: Text("Create")),
                   ElevatedButton(onPressed: (){
                     update('pets', 'tom', 'animal', "tiger");
                   }, child: Text("Update")),
                       ElevatedButton(onPressed: (){
-
+Navigator.push(context, MaterialPageRoute(builder: (context)=>PetList()));
                       }, child: Text("Retrive")),
                           ElevatedButton(onPressed: (){
 delete('pets', 'kitts');
